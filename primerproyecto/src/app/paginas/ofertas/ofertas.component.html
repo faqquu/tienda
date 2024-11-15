@@ -1,0 +1,21 @@
+<h1>Ofertas</h1>
+<div id="of1">
+  <img src="https://locomunico.com/wp-content/uploads/2014/02/oferta-destacada.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">OFERTAS DEL 29/10 AL 3/11</h5>
+  </div>
+</div>
+
+<div class="card-container">
+  <ng-container *ngIf="Productos && Productos.length">
+    <ng-container *ngFor="let producto of Productos">
+      <div *ngIf="producto.disponibilidad" class="card">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}" class="product-image">
+        <h2>{{ producto.nombre }}</h2>
+        <p>{{ producto.descripcion }}</p>
+        <p>Precio: <s>{{ producto.precioan | currency }}</s> {{ producto.precio | currency }}</p>
+        <button type="button" class="btn btn-outline-primary" (click)="agregar(producto)">Agregar al carrito</button>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

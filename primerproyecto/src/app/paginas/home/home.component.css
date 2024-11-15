@@ -1,0 +1,15 @@
+.carousel-inner {
+    width: 1000px;
+    height: 500px;
+    justify-content: center;
+    margin: auto;
+}
+
+#card{
+    margin: auto;
+    width: 1000px;
+    height: 250px;
+}
+
+
+
